@@ -1,0 +1,9 @@
+import os
+
+
+class Config(object):
+    DEBUG = True
+    SECRET_KEY = os.urandom(24)
+    TESTING = False
+    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
