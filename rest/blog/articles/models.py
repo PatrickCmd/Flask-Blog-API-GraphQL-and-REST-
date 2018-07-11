@@ -15,11 +15,13 @@ class Category(db.Model):
     
     def create_category(self):
         db.session.add(self)
-        db.commit()
+        db.session.commit()
+        return "Category added successfully"
 
     @staticmethod
-    def cattyegor_exists(name):
-        user = User.query.filter_by(title=title).first()
+    def category_exists(name):
+        category = Category.query.filter_by(name=name).first()
+        return category
     
     @staticmethod
     def get_categories():
@@ -38,9 +40,11 @@ class Article(db.Model):
     title = db.Column(db.String, nullable=False)
     content = db.Column(db.Text, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    user = db.relationship('User', backref=db.backref('articles', lazy='dynamic'))
+    user = db.relationship('User',
+                           backref=db.backref('articles', lazy='dynamic'))
     category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
-    category = db.relationship('Category', backref=db.backref('articles', lazy='dynamic'))
+    category = db.relationship('Category',
+                               backref=db.backref('articles', lazy='dynamic'))
     timestamp = db.Column(db.DateTime, nullable=False)
     update_date = db.Column(db.DateTime)
 
@@ -55,6 +59,7 @@ class Article(db.Model):
     def create_article(self):
         db.session.add(self)
         db.session.commit()
+        return "Article added successfully"
     
     @staticmethod
     def get_articles():
@@ -67,7 +72,6 @@ class Article(db.Model):
         return article
         
     @staticmethod
-    def get_category_articles(article_id, category_id):
-        category_articles = Article.query.filter_by(
-            id=article_id, category_id=category_id).all()
-        return category_articles
+    def get_user_articles(user_id):
+        user_articles = Article.query.filter_by(user_id=user_id).all()
+        return user_articles

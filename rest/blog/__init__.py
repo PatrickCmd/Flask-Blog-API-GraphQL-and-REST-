@@ -12,8 +12,10 @@ def create_app():
     db.init_app(app)
 
     from blog.users import users
+    from blog.articles import blog_app
 
     # register application blueprints
     app.register_blueprint(users)
-    
+    app.register_blueprint(blog_app)
+
     return app
