@@ -14,6 +14,8 @@ graphene = "*"
 flask-sqlalchemy = "*"
 "psycopg2-binary" = "*"
 flask-bcrypt = "*"
+graphene-sqlalchemy = "*"
+alembic = "*"
 
 [dev-packages]
 

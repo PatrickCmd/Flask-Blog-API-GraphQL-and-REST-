@@ -105,3 +105,4 @@ venv.bak/
 
 # DB Migratiopns
 migrations/
+alembic/
