@@ -67,6 +67,23 @@ $ export DATABASE_URL=postgresql://postgres@localhost:{port}/{dbname} Where port
 
 ### STARTING THE APPLICATION
 
+### FOR REST
+```
+$ cd rest
+```
+**Run migrations and create database tables**
+```
+$ python manage.py db init
+$ python manage.py db migrate
+$ python manage.py db upgrade
+```
+**Run the application**
+```
+$ python manage.py runserver
+```
+Use [postman](https://www.getpostman.com/) with the url **https://www.getpostman.com/** to 
+test out the endpoints
+
 ### FOR GRAPHQL
 ```
 $ cd graphql
