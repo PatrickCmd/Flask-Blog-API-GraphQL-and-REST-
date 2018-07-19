@@ -6,7 +6,7 @@ The intent is mainly to compare REST and GRAPHQL in how queries and data manipul
 made in both web services.
 
 ## TECHNOLOGIES USED
-- **Python**: [Python](https://www.python.org/) is a programming language that lets you work quickly and integrate systems more effectively
+- **Python3.6**: [Python](https://www.python.org/) is a programming language that lets you work quickly and integrate systems more effectively
 - **Flask**: [Flask](http://flask.pocoo.org/) is a microframework for Python based on Werkzeug, Jinja 2 and good intentions
 - **Flask Restful**: [Flask-RESTful](https://flask-restful.readthedocs.io/en/latest/) is an extension for Flask that adds support for quickly building REST APIs
 - **Graphene**: [Graphene-Python](http://graphene-python.org/) is a library for building GraphQL APIs in Python easily.
