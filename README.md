@@ -171,3 +171,68 @@ Retrieve articles by specific user
 }
 $id is an integer number(positive)
 ```
+
+**Basic mutations**
+
+Create user
+```
+mutation {
+  createUser(username: "name", email: "email", password: "password") {
+    user {
+      id
+      username
+      email
+    }
+  }
+}
+```
+
+Create an article category
+```
+mutation {
+  createCategory(name: "category name", description: "Text description") {
+    category {
+      id
+      name
+      description
+    }
+  }
+}
+```
+
+Create an article
+```
+mutation {
+  createArticle(title: "Article title", content: "Text content", userId: 1, categoryId: 1) {
+    article {
+      id
+      title
+      content
+    }
+  }
+}
+```
+
+Edit an article
+```
+mutation {
+  editArticle(articleId: 1, title: "New title", content: "New content"){
+    article{
+      id
+      title
+      content
+    }
+  }
+}
+```
+
+Delete an article
+```
+mutation {
+  deleteArticle(articleId: 1){
+    article{
+      id
+    }
+  }
+}
+```
