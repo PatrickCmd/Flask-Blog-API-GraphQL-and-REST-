@@ -43,11 +43,13 @@ $ SET DATABASE_URL=postgresql://postgres@localhost:{port}/{dbname} Where port is
 
 ### ON MAC/UBUNTU
 **Install postgres**
+
 **MAC Users**
 ```
 $ brew install postgres
 ```
 Follow the [link](https://brew.sh/) on how to setup brew if not yet installed
+
 **Ubuntu users**
 Follow the [Link](https://www.postgresql.org/download/linux/ubuntu/) on how to setup 
 and install postgres(>=10) on Ubuntu-linux platform
