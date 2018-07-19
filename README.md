@@ -81,7 +81,7 @@ $ python manage.py db upgrade
 ```
 $ python manage.py runserver
 ```
-Use [postman](https://www.getpostman.com/) with the url **https://www.getpostman.com/** to 
+Use [postman](https://www.getpostman.com/) with the url **localhost:5000** to 
 test out the endpoints
 
 ### FOR GRAPHQL
