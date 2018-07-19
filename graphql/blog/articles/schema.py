@@ -7,6 +7,7 @@ from blog.articles.models import(
     Category as CategoryModel,
     Article as ArticleModel
 )
+from blog.utility.utilities import update_entity_fields
 
 
 class Category(SQLAlchemyObjectType):
@@ -50,6 +51,39 @@ class CreateArticle(graphene.Mutation):
         return CreateArticle(article=article)
 
 
+class DeleteArticle(graphene.Mutation):
+    
+    class Arguments:
+        article_id = graphene.Int(required=True)
+    article = graphene.Field(Article)
+    
+    def mutate(self, info, article_id):
+        query_article = Article.get_query(info)
+        article = query_article.filter(
+            ArticleModel.id == article_id).first()
+        article.delete_article()
+        return DeleteArticle(article=article)
+
+
+class EditArticle(graphene.Mutation):
+
+    class Arguments:
+        article_id = graphene.Int(required=True)
+        title = graphene.String(required=False)
+        content = graphene.String(required=False)
+    article = graphene.Field(Article)
+
+    def mutate(self, info, article_id, **kwargs):
+        query_article = Article.get_query(info)
+        article = query_article.filter(
+            ArticleModel.id == article_id).first()
+        update_entity_fields(article, **kwargs)
+        article.edit_article()
+
+        return EditArticle(article=article)
+
+
+
 class Query(graphene.ObjectType):
     categories = graphene.List(Category)
     articles = graphene.List(Article)
@@ -90,3 +124,5 @@ class Query(graphene.ObjectType):
 class Mutation(graphene.ObjectType):
     create_category = CreateCategory.Field()
     create_article = CreateArticle.Field()
+    delete_article = DeleteArticle.Field()
+    edit_article = EditArticle.Field()

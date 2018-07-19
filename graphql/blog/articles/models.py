@@ -49,3 +49,12 @@ class Article(Base):
         db_session.add(self)
         db_session.commit()
         return "Article added successfully"
+    
+    def delete_article(self):
+        db_session.delete(self)
+        db_session.commit()
+        return "Article deleted successfully"
+    
+    def edit_article(self):
+        db_session.commit()
+        return "Article updated successfully"
