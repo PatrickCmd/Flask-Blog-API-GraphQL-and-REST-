@@ -6,16 +6,16 @@ The intent is mainly to compare REST and GRAPHQL in how queries and data manipul
 made in both web services.
 
 ## TECHNOLOGIES USED
-- Python: [Python](https://www.python.org/) is a programming language that lets you work quickly and integrate systems more effectively
-- Flask: [Flask](http://flask.pocoo.org/) is a microframework for Python based on Werkzeug, Jinja 2 and good intentions
-- Flask Restful: [Flask-RESTful](https://flask-restful.readthedocs.io/en/latest/) is an extension for Flask that adds support for quickly building REST APIs
-- Graphene: [Graphene-Python](http://graphene-python.org/) is a library for building GraphQL APIs in Python easily.
-- GraphQL: [GraphQL](https://graphql.org/) is a query language for APIs and a runtime for fulfilling those queries with your existing data
-- Flask-Sqlalchemy: [Flask-SQLAlchemy](http://flask-sqlalchemy.pocoo.org/) is an extension for Flask that adds support for SQLAlchemy to your application.
-- SQLAlchemy: [SQLAlchemy](https://www.sqlalchemy.org/) is the Python SQL toolkit and Object Relational Mapper that gives application developers the full power and flexibility of SQL.
-- Postgresql: [PostgreSQL](https://www.postgresql.org/) is a powerful, open source object-relational database system.
--  Pipenv: [Pipenv](https://docs.pipenv.org/) is a tool that aims to bring the best of all packaging worlds (bundler, composer, npm, cargo, yarn, etc.) to the Python world.
-- Psycopg2: [Psycopg](http://initd.org/psycopg/) is the most popular PostgreSQL adapter for the Python programming language.
+- **Python**: [Python](https://www.python.org/) is a programming language that lets you work quickly and integrate systems more effectively
+- **Flask**: [Flask](http://flask.pocoo.org/) is a microframework for Python based on Werkzeug, Jinja 2 and good intentions
+- **Flask Restful**: [Flask-RESTful](https://flask-restful.readthedocs.io/en/latest/) is an extension for Flask that adds support for quickly building REST APIs
+- **Graphene**: [Graphene-Python](http://graphene-python.org/) is a library for building GraphQL APIs in Python easily.
+- **GraphQL**: [GraphQL](https://graphql.org/) is a query language for APIs and a runtime for fulfilling those queries with your existing data
+- **Flask-Sqlalchemy**: [Flask-SQLAlchemy](http://flask-sqlalchemy.pocoo.org/) is an extension for Flask that adds support for SQLAlchemy to your application.
+- **SQLAlchemy**: [SQLAlchemy](https://www.sqlalchemy.org/) is the Python SQL toolkit and Object Relational Mapper that gives application developers the full power and flexibility of SQL.
+- **Postgresql**: [PostgreSQL](https://www.postgresql.org/) is a powerful, open source object-relational database system.
+-  **Pipenv**: [Pipenv](https://docs.pipenv.org/) is a tool that aims to bring the best of all packaging worlds (bundler, composer, npm, cargo, yarn, etc.) to the Python world.
+- **Psycopg2**: [Psycopg](http://initd.org/psycopg/) is the most popular PostgreSQL adapter for the Python programming language.
 
 ## SETTING UP THE PROJECT
 
