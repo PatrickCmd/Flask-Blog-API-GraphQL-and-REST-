@@ -21,7 +21,7 @@ $ pipenv shell
 
 ### Install the requirements
 ```
-pipenv install
+$ pipenv install
 ```
 
 ## SETTING UP THE DATABASE
@@ -99,3 +99,74 @@ $ python manage.py runserver
 Follow the link **localhost:5000/blog_api** in the browser address and get the **GraphiQL** 
 the GraphQL web client and follow the document in the **Documentation Explorer** to start
 running the queries and mutations
+
+**Basic queries**
+Get all users with user details
+```
+{
+  users {
+    id
+    username
+    email
+  }
+}
+```
+
+Get a single user
+```
+{
+  user(userId: $id) {
+    id
+    username
+    email
+  }
+}
+$id is an integer number(positive)
+```
+
+Retrieve all articles
+```
+{
+  articles {
+    id
+    title
+    content
+    category {
+      name
+      description
+    }
+  }
+}
+```
+
+Retrieve a single article
+```
+{
+  article(articleId: $id) {
+    id
+    title
+    content
+    category {
+      name
+      description
+    }
+  }
+}
+$id is an integer number(positive)
+```
+
+Retrieve articles by specific user
+```
+{
+  userArticles(userId: $id) {
+    id
+    title
+    content
+    category {
+      name
+      description
+    }
+  }
+}
+$id is an integer number(positive)
+```
