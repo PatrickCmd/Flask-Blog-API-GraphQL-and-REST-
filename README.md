@@ -101,6 +101,7 @@ the GraphQL web client and follow the document in the **Documentation Explorer**
 running the queries and mutations
 
 **Basic queries**
+
 Get all users with user details
 ```
 {
